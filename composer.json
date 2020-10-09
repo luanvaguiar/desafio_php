@@ -1,0 +1,11 @@
+{
+    "name": "luanaguiar/desafio-php",
+    "description": "Desafio CRUD",
+    "authors": [
+        {
+            "name": "Luan Aguiar",
+            "email": "luanaguiar16@live.com"
+        }
+    ],
+    "require": {}
+}
