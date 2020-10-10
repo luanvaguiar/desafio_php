@@ -2,7 +2,9 @@
 
 namespace App\Entidade;
 
-    class Funcionario{
+use App\Dao\Database;
+
+class Funcionario{
 
         /**
          * Identificador único do funcionario
@@ -99,8 +101,9 @@ namespace App\Entidade;
         public function cadastrar(){
             
             // Inserindo Funcionario no Banco
+            $Database = new Database('tb_funcionarios');
             
-
+            echo '<pre>'; print_r($Database); echo '</pre>'; exit;
             // Atribuir ID para a instancia
 
             // Retorno de Sucesso da persistencia

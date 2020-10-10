@@ -11,6 +11,7 @@ if(isset($_POST['nome'], $_POST['data'], $_POST['area_atoacao'])){
     $funcionario->setNome($_POST['nome']);
     $funcionario->setNome($_POST['data']);
     $funcionario->cadastrar();
+    echo $funcionario->getNome();
 
 }
 
