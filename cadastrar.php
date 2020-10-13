@@ -7,9 +7,11 @@ define('TITTLE', 'Cadastrar Funcionário');
 
 use \App\Entidade\Funcionario;
 
+$obFuncionario = new Funcionario;
+
 //Validacao do metodo POST
 if(isset($_POST['nome'], $_POST['data'], $_POST['area_atoacao'])){
-    $obFuncionario = new Funcionario;
+    
     $obFuncionario->setArea_Atoacao($_POST['area_atoacao']);
     $obFuncionario->setData($_POST['data']);
     $obFuncionario->setStatus($_POST['situacao'] == 's' ? 'Ativo(a)' : 'Inativo(a)');
