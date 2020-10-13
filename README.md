@@ -12,7 +12,6 @@ Criação de um CRUD MVC em PHP de cadastro de funcionários para uma empresa.
 - MySQL
 - Composer
 - Bootstrap
-- Font-Awesome
 - Visual Studio Code
 
 # Autor
