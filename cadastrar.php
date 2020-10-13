@@ -1,17 +1,23 @@
 <?php
 
 include __DIR__.'/vendor/autoload.php';
+require __DIR__.'/app/Endentidade/Funcionario.php';
+
+define('TITTLE', 'Cadastrar Funcionário');
 
 use \App\Entidade\Funcionario;
 
-
 //Validacao do metodo POST
 if(isset($_POST['nome'], $_POST['data'], $_POST['area_atoacao'])){
-    $funcionario = new Funcionario();
-    $funcionario->setNome($_POST['nome']);
-    $funcionario->setNome($_POST['data']);
-    $funcionario->cadastrar();
-    echo $funcionario->getNome();
+    $obFuncionario = new Funcionario;
+    $obFuncionario->setArea_Atoacao($_POST['area_atoacao']);
+    $obFuncionario->setData($_POST['data']);
+    $obFuncionario->setStatus($_POST['situacao'] == 's' ? 'Ativo(a)' : 'Inativo(a)');
+    $obFuncionario->setNome($_POST['nome']);
+    $obFuncionario->cadastrar();
+
+    header('Location: index.php?status=sucess');
+    exit;
 
 }
 
